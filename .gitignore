@@ -1,0 +1,21 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+artifacts/
+testtemp/
+*.log
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Historical session reports may contain machine-specific observations.
+SESSION_SUMMARY.md
+FRAMEWORK_COMPLETION_STATUS.md
+COMPLETION_REPORT.md
+IMPLEMENTATION_SUMMARY.md

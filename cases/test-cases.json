@@ -1,0 +1,119 @@
+{
+  "cases": [
+    {
+      "id": "NOTEPAD-001",
+      "title": "Opening a blank Notepad editor",
+      "steps": [
+        "Create a new blank Notepad tab without changing existing tabs.",
+        "Verify the Text editor control is visible."
+      ],
+      "expected": "the editor contains no text",
+      "oracle": "inferred",
+      "automation": "done",
+      "notes": "Notepad has been opened and a fresh tab is ready"
+    },
+    {
+      "id": "NOTEPAD-002",
+      "title": "Entering and reading editor text",
+      "steps": [
+        "Enter a known string in the Text editor.",
+        "Read the editor text."
+      ],
+      "expected": "the editor text equals the entered string",
+      "oracle": "inferred",
+      "automation": "done",
+      "notes": "Text I/O operations verified end-to-end"
+    },
+    {
+      "id": "NOTEPAD-003",
+      "title": "Undoing and redoing an editor change",
+      "steps": [
+        "Enter a known string in the Text editor.",
+        "Undo the edit.",
+        "Redo the edit.",
+        "Save the document under pytest's temporary directory."
+      ],
+      "expected": "the entered string is restored",
+      "oracle": "inferred",
+      "automation": "done",
+      "notes": "Edit history operations verified"
+    },
+    {
+      "id": "NOTEPAD-004",
+      "title": "Keeping text independent across tabs",
+      "steps": [
+        "Enter and save text in the first tab.",
+        "Add a new tab.",
+        "Enter and save different text in the new tab.",
+        "Select each tab in turn."
+      ],
+      "expected": "each tab retains its own saved text",
+      "oracle": "inferred",
+      "automation": "done",
+      "notes": "Multi-tab document isolation verified"
+    },
+    {
+      "id": "NOTEPAD-005",
+      "title": "Saving a document to a temporary file",
+      "steps": [
+        "Enter a known string in the Text editor.",
+        "Save the document to a path under pytest's temporary directory."
+      ],
+      "expected": "the saved file contains exactly the entered string",
+      "oracle": "inferred",
+      "automation": "done",
+      "notes": "File save operation verified"
+    },
+    {
+      "id": "NOTEPAD-006",
+      "title": "Opening a temporary text file",
+      "steps": [
+        "Create a text file under pytest's temporary directory.",
+        "Open the file in Notepad."
+      ],
+      "expected": "the editor displays the file contents",
+      "oracle": "inferred",
+      "automation": "done",
+      "notes": "File open operation verified"
+    },
+    {
+      "id": "SQLDM-001",
+      "title": "Opening the SQLdm main window",
+      "steps": [
+        "Verify SQLdm is installed on the system",
+        "Launch the installed SQLdm client executable",
+        "Wait for the main window to appear"
+      ],
+      "expected": "Main window is visible with correct title",
+      "oracle": "inferred",
+      "automation": "done",
+      "notes": "SQLdm basic smoke test - verifies successful application launch"
+    },
+    {
+      "id": "SQLDM-002",
+      "title": "SQLdm main window is enabled and responsive",
+      "steps": [
+        "Launch the installed SQLdm client executable",
+        "Wait for the main window to appear",
+        "Verify the window is enabled and not in a disabled state"
+      ],
+      "expected": "Main window is visible, enabled, and responsive to user input",
+      "oracle": "inferred",
+      "automation": "done",
+      "notes": "Verifies SQLdm application responsiveness after launch"
+    },
+    {
+      "id": "SQLDM-003",
+      "title": "SQLdm displays status information",
+      "steps": [
+        "Launch the installed SQLdm client executable",
+        "Wait for the main window to appear",
+        "Check the status bar for status or connection information"
+      ],
+      "expected": "Status bar is visible and contains connection/status information",
+      "oracle": "inferred",
+      "automation": "done",
+      "notes": "Verifies SQLdm status bar is accessible and displayable"
+    }
+  ]
+}
